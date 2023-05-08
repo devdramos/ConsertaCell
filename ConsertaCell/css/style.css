@@ -1,0 +1,86 @@
+*{
+    /* Reset nas bordas */
+    margin: 0;
+    padding: 0;
+}
+
+
+.img-mao{
+    /* Aumentar saturação da imagem */
+    filter: saturate(150%);
+
+    /* Animando a imagem */
+    --cor-piscar: rgb(159, 29, 247);
+    animation: piscar 3s alternate infinite ease-in-out;
+
+    /* Tamanho da imagem */
+    width: clamp(10em, 10em + 10vw, 15em);
+}
+
+.img-conserto{
+    /* Aumentar saturação da imagem */
+    filter: saturate(150%);
+
+    /* Tamanho da imagem e deixar ela redonda */
+    border-radius: 50%;
+    width: clamp(10em, 10em + 10vw, 15em);
+
+     /* Animando a imagem */
+    --cor-piscar: rgb(159, 29, 247);
+    animation: piscar 3s alternate infinite ease-in-out; 
+}
+
+
+.titulo{
+    text-align: center;
+    letter-spacing: 2px;
+    --cor-piscar: rgb(159, 29, 247);
+    animation: piscar 3s alternate infinite ease-in-out;
+    font-family: 'Press Start 2P', cursive;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
+}
+
+p{
+    font-size: clamp(1em, 1em + 1vw, 1em);    
+}
+
+.rodape, .conteudo-principal{
+    /* Alinhamento e centralização das colunas */
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg-roxo{
+    /* Cor da coluna */
+    background-color: rgb(159, 29, 247);
+}
+
+
+/* Animação NEON para piscar */
+@keyframes piscar{
+    from{
+        filter: drop-shadow(0 0 0 var(--cor-piscar));
+    }
+    to{
+        filter: drop-shadow(0 0 30px var(--cor-piscar));
+    }
+}
+
+.mudando-cor{
+    animation: mudarcor 1.5s alternate-reverse infinite linear;
+}
+
+@keyframes mudarcor{
+    from{
+        color: white;
+    }
+    to{
+        color:rgb(159, 29, 247);
+    }
+}
+
+
+
+
+
+
